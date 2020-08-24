@@ -155,5 +155,9 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.lyriq
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/lyriq/lyriq-vendor.mk)
