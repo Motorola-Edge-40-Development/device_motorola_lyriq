@@ -141,6 +141,13 @@ PRODUCT_PACKAGES += \
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.1-service.lyriq-multihal
+
+PRODUCT_PACKAGES += \
+    sensors.dynamic_sensor_hal
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 33
 
