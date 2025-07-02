@@ -104,5 +104,8 @@ BOARD_MKBOOTIMG_INIT_ARGS += \
 TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_PREBUILT_KERNEL_HEADERS := $(DEVICE_PATH)-kernel/kernel-uapi-headers.tar.gz
 
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/props/vendor.prop
+
 # Inherit the proprietary files
 include vendor/motorola/lyriq/BoardConfigVendor.mk
