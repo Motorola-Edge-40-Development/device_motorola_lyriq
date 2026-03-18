@@ -97,6 +97,30 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.mt6893 \
+    init.connectivity.rc \
+    init.connectivity.common.rc \
+    init_conninfra.rc \
+    init.mmi.overlay.rc \
+    init.mmi.rc \
+    init.mmi.usb.sh \
+    init.mmi.usb.configfs.rc \
+    init.modem.rc \
+    init.recovery.mt6893.rc \
+    init.mt6893.rc \
+    init.mt6893.usb.rc \
+    init.mt6893.power.rc \
+    init.mtkgki.rc \
+    init.oem.hw.sh \
+    init.project.rc \
+    init.sensor_2_0.rc \
+    ueventd.mt6893.rc
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/init/fstab.mt6893:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6893
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
