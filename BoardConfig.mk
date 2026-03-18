@@ -5,6 +5,21 @@
 
 DEVICE_PATH := device/motorola/lyriq
 
+# A/B
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS := \
+    boot \
+    init_boot \
+    system \
+    system_dlkm \
+    system_ext \
+    product \
+    vendor \
+    vendor_dlkm \
+    vendor_boot \
+    vbmeta \
+    vbmeta_system
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := lyriq
 TARGET_NO_BOOTLOADER := true
