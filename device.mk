@@ -159,5 +159,16 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.lyriq
 
+# Wifi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi-service
+
+PRODUCT_PACKAGES += \
+    hostapd \
+    wpa_supplicant
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/motorola/lyriq/lyriq-vendor.mk)
